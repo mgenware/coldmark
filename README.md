@@ -113,3 +113,7 @@ Renders to:
 # this is a markdown title
 ```</code></pre>
 ````
+
+## Links
+## Autolinks
+Unlike CommonMark, which requires autolinks to be surrounded by `<` and `>`, ColdMark will convert all URL-like text to links.

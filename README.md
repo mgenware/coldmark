@@ -1,18 +1,18 @@
 # ColdMark
 The Markdown language we use at coldfunction.com
 
-The language is base on [CommonMark](http://commonmark.org/) with following additions.
+The language is based on the [CommonMark](http://commonmark.org/) standard with following additions.
 
 ## No inline HTML
-Allowing inline HTML enforces parser to sanitize HTML to block malicious code, it also looks pretty ugly.
+Allowing inline HTML enforces parser to sanitize HTML to block malicious code. It also looks pretty ugly.
 
 ## Line breaks
-We discourage use of [hard line breaks](http://spec.commonmark.org/0.12/#hard-line-breaks) in CommonMark spec. We believed that markdown should be rendered the same as what you wrote.
+We discourage the use of [hard line breaks](http://spec.commonmark.org/0.12/#hard-line-breaks) in CommonMark spec. We believed that markdown should be rendered the same as what you wrote.
 
 
-In coldmark:
+In ColdMark:
 * **One Carriage return** renders to `<br />`.
-* **Two consecutive Carriage returns** will start a new paragraph, that is, a new `<p>`.
+* **Two consecutive Carriage returns** will start a new paragraph, that is, a `<p>` element.
 
 For example, this:
 ```
@@ -56,16 +56,16 @@ Renders to:
 Note that a custom class must be preceded by a language name, if you don't need a language name, use `none` instead. For example:
 ````markdown
 ```none warning
-Warning: a is not defined.
+Warning: variable 'a' is not defined.
 ```
 ````
 
 Renders to:
 ```html
-<pre><code class="language-javascript coldmark-warning">Warning: a is not defined.</code></pre>
+<pre><code class="language-javascript coldmark-warning">Warning: variable 'a' is not defined.</code></pre>
 ```
 
-A fenced code block can contain one language name and unlimited number of custom classes.
+A fenced code block can contain one language name and unlimited number of custom classes. For example:
 ````markdown
 ```none info bold dark-theme
 Hi

@@ -7,7 +7,7 @@ The language is based on the [CommonMark](http://commonmark.org/) standard with 
 Allowing inline HTML enforces parser to sanitize HTML to block malicious code. It also looks pretty ugly.
 
 ## Line breaks
-We discourage the use of [hard line breaks](http://spec.commonmark.org/0.12/#hard-line-breaks) in CommonMark spec. We believed that markdown should be rendered the same as what you wrote.
+We discourage the use of [hard line breaks](http://spec.commonmark.org/0.12/#hard-line-breaks) in CommonMark spec.
 
 
 In ColdMark:
@@ -31,6 +31,7 @@ Renders to:
 ## Fenced code blocks
 
 ### Support for languages and `language-` CSS class
+For example:
 ````markdown
 ```javascript
 ```
@@ -41,7 +42,8 @@ Renders to:
 <pre><code class="language-javascript"></code></pre>
 ```
 
-Language name defaults to `none`:
+#### Language name defaults to `none`
+For example:
 ````markdown
 ```
 ```
@@ -54,18 +56,7 @@ Renders to:
 
 
 ### Support for custom styles
-````markdown
-```javascript happy
-let value = 1 / 0;
-```
-````
-
-Renders to:
-```html
-<pre><code class="language-javascript coldmark-happy">let value = 1 / 0;</code></pre>
-```
-
-A fenced code block can contain one language name and unlimited number of custom classes (see "System styles" for an exception). For example:
+A fenced code block can contain one language name and unlimited number of custom classes (see `System styles` section below for an exception). The CSS class name for a custom style starts with `coldmark-`. For example:
 ````markdown
 ```none info bold dark-theme
 Hi
@@ -74,11 +65,11 @@ Hi
 
 Renders to:
 ```html
-<pre><code class="language-javascript coldmark-info coldmark-bold coldmark-dark-theme">Hi</code></pre>
+<pre><code class="language-none coldmark-info coldmark-bold coldmark-dark-theme">Hi</code></pre>
 ```
 
 #### System styles
-Belows are ColdMark's system styles
+Belows are ColdMark's system styles:
 ```
 info, success, error, warning
 ```

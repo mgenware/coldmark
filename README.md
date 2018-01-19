@@ -50,7 +50,7 @@ For example:
 ````
 
 Renders to:
-```
+```html
 <pre><code class="language-none"></code></pre>
 ```
 
@@ -81,13 +81,12 @@ Unlike custom styles, a system style remains as a style even they appears like a
 ````
 
 Renders to:
-````
-```
+```html
 <pre><code class="coldmark-info"></code></pre>
 ```
-````
 
 ### Support for language shortcuts
+For example, language `js` is converted to `javascript` automatically.
 ````markdown
 ```js
 ```

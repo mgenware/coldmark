@@ -41,6 +41,18 @@ Renders to:
 <pre><code class="language-javascript"></code></pre>
 ```
 
+Language name defaults to `none`:
+````markdown
+```
+```
+````
+
+Renders to:
+```
+<pre><code class="language-none"></code></pre>
+```
+
+
 ### Support for custom classes
 ````markdown
 ```javascript error

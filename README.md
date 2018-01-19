@@ -1,7 +1,7 @@
 # ColdMark
 The Markdown language we use at coldfunction.com
 
-The language is based on the [CommonMark](http://commonmark.org/) standard with following additions.
+The ColdMark language is based on the [CommonMark](http://commonmark.org/) spec with the following additions.
 
 ## No inline HTML
 Allowing inline HTML enforces parser to sanitize HTML to block malicious code. It also looks pretty ugly.

@@ -53,31 +53,19 @@ Renders to:
 ```
 
 
-### Support for custom classes
+### Support for custom styles
 ````markdown
-```javascript error
+```javascript happy
 let value = 1 / 0;
 ```
 ````
 
 Renders to:
 ```html
-<pre><code class="language-javascript coldmark-error">let value = 1 / 0;</code></pre>
+<pre><code class="language-javascript coldmark-happy">let value = 1 / 0;</code></pre>
 ```
 
-Note that a custom class must be preceded by a language name, if you don't need a language name, use `none` instead. For example:
-````markdown
-```none warning
-Warning: variable 'a' is not defined.
-```
-````
-
-Renders to:
-```html
-<pre><code class="language-javascript coldmark-warning">Warning: variable 'a' is not defined.</code></pre>
-```
-
-A fenced code block can contain one language name and unlimited number of custom classes. For example:
+A fenced code block can contain one language name and unlimited number of custom classes (see "System styles" for an exception). For example:
 ````markdown
 ```none info bold dark-theme
 Hi
@@ -88,6 +76,25 @@ Renders to:
 ```html
 <pre><code class="language-javascript coldmark-info coldmark-bold coldmark-dark-theme">Hi</code></pre>
 ```
+
+#### System styles
+Belows are ColdMark's system styles
+```
+info, success, error, warning
+```
+
+Unlike custom styles, a system style remains as a style even they appears like a language name. For example:
+````
+```info
+```
+````
+
+Renders to:
+````
+```
+<pre><code class="coldmark-info"></code></pre>
+```
+````
 
 ### Support for language shortcuts
 ````markdown

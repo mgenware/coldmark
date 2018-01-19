@@ -103,6 +103,7 @@ List of supported shortcuts:
 * `js`: `javascript`.
 * `py`: `python`.
 * `ts`: `typescript`.
+* `sh`: `shell`.
 
 
 ### Use longer fences to escape shorter fences

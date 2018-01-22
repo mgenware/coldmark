@@ -74,7 +74,7 @@ Belows are ColdMark's system styles:
 info, success, error, warning
 ```
 
-Unlike custom styles, a system style remains as a style even they appears like a language name. For example:
+Unlike custom styles, a system style remains as a style even they appear like a language name. For example:
 ````
 ```info
 ```
